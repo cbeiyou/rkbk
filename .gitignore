@@ -1,0 +1,15 @@
+# PDF资料文件太大，不纳入版本控制
+辅导资料/
+
+# OCR测试输出
+test_output/
+
+# OCR生成的图片文件
+output/*/images/
+
+# Python缓存
+__pycache__/
+*.pyc
+
+# 进度文件
+output/*/progress.json
