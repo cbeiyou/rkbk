@@ -14,8 +14,8 @@ from rapidocr_onnxruntime import RapidOCR
 from PIL import Image, ImageEnhance, ImageFilter
 
 # 配置
-PDF_PATH = r"E:\project\rk\辅导资料\06：高项章节练习参考答案.pdf"
-OUTPUT_DIR = r"E:\project\rk\output\参考答案"
+PDF_PATH = r"E:\develop\project\rkbk\辅导资料\06：高项章节练习参考答案.pdf"
+OUTPUT_DIR = r"E:\develop\project\rkbk\output\参考答案"
 SCALE = 3  # 图片放大倍数
 TEST_PAGES = 0  # 测试模式：只处理前N页，设为0处理全部
 

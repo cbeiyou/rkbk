@@ -14,8 +14,8 @@ from rapidocr_onnxruntime import RapidOCR
 from PIL import Image, ImageEnhance, ImageFilter
 
 # 配置
-PDF_PATH = r"E:\project\rk\辅导资料\02：章节演练-cp.pdf"
-OUTPUT_DIR = r"E:\project\rk\output\章节演练"
+PDF_PATH = r"E:\develop\project\rkbk\辅导资料\02：章节演练-cp.pdf"
+OUTPUT_DIR = r"E:\develop\project\rkbk\output\章节演练"
 SCALE = 3  # 图片放大倍数
 
 # 进度文件
