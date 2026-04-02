@@ -20,6 +20,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 辅导资料/           # PDF学习资料（原始扫描件）
 output/章节演练/    # 题目Markdown（按章节分类，已完成）
 output/参考答案/    # 答案Markdown（按章节分类，已完成）
+output/高项讲义/    # 讲义Markdown（按章节分类，已完成）
 备考进度.md         # 学习进度跟踪（错题记录、知识点总结、当前进度）
 ```
 
@@ -43,6 +44,7 @@ output/参考答案/    # 答案Markdown（按章节分类，已完成）
 |------|------|------|------|
 | `process_full_pdf.py` | 处理章节演练PDF | 章节演练PDF | `output/章节演练/*.md` |
 | `process_answers.py` | 处理参考答案PDF | 参考答案PDF | `output/参考答案/*.md` |
+| `process_handout.py` | 处理高项讲义PDF | 高项讲义PDF | `output/高项讲义/*.md` |
 | `fix_chapters_v2.py` | 修复格式、检测不完整题目 | 章节Markdown | 修正后的Markdown |
 | `fix_missing_options.py` | 标记跨页丢失的选项 | 章节Markdown | 添加缺失标记 |
 | `check_chapters.py` | 校对题目与答案 | 题目+答案Markdown | 校对报告 |
@@ -189,9 +191,8 @@ python test_paddleocr.py   # PaddleOCR测试
 
 - 每次出 **3道题**，用户一次性回答3题
 - 用户按题号格式回答（如：`64.A 65.C 66.A`）
-<<<<<<< Updated upstream
 
-### 解析流程（用户提交答案后必须完整执行）
+### 批改解析流程（用户提交答案后必须完整执行）
 
 **一、逐题逐选项解析**
 每道题必须：
@@ -210,23 +211,6 @@ python test_paddleocr.py   # PaddleOCR测试
 
 **五、错题记录更新**
 错题写入备考进度.md，格式：
-=======
-- 无需给出答案示例格式
-
-### 批改解析流程（必须完整执行）
-
-用户提交答案后，必须执行以下完整解析流程：
-
-1. **逐选项分析**：说明每个选项为什么对/错
-2. **正确答案定位**：明确正确答案及理由
-3. **错误答案剖析**：指出用户错误选项的具体问题
-4. **知识点总结**：归纳本题考查的核心知识点（概念定义、关键特征、易混淆点）
-5. **举一反三拓展**：同类题型解题思路、相关知识点关联、命题陷阱识别
-6. **错题记录更新**：错题需写入备考进度.md
-
-### 错题记录格式
-
->>>>>>> Stashed changes
 ```markdown
 | 题号 | 我的答案 | 正确答案 | 错误原因分析 |
 |------|----------|----------|--------------|
